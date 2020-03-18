@@ -9,19 +9,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Shop it',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('Shop it'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.add_shopping_cart),
+              onPressed: () {},
+            ),
+          ],
         ),
         body: Center(
           child: Container(
             child: Text("Hello World!"),
           ),
         ),
+        drawer: Drawer(),
       ),
     );
   }
